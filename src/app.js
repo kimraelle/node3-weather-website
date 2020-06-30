@@ -38,14 +38,14 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         name: 'Kim',
-        message: 'HEEEELLLLPPPP'
+        message: 'Help text here. Sample only'
     })
 })
 
 app.get('/weather', (req, res) => {
     if(!req.query.address){
         return res.send ({
-            error: 'you must input the address'
+            error: 'You must input the address.'
         })
     }
     geocode(req.query.address, (error, {long, lat, loc} = {}) => {

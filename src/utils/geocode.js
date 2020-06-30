@@ -5,9 +5,9 @@ const geocode = (address, callback) => {
 
     postmanrequest({ url, json: true }, (error, {body}) => { 
       if(error) {
-          callback('Unable to connect to weather service')
+          callback('Unable to connect to weather service.')
       } else if (body.features.length === 0) {
-          callback('Unable to find location')
+          callback('Unable to find location.')
       } else {
           callback(undefined, {
                 long: body.features[0].center[0],
